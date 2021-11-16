@@ -65,6 +65,9 @@ if (props.places) {
     return (
       <section>
         {form}
+        <div className="header">
+        <h1>Destinations</h1>
+        </div>
         {props.places.map((place) => {
           return (
             <div key={place._id} className="place">
