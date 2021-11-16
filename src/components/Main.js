@@ -8,7 +8,7 @@ const Main = (props) => {
     const [places, setPlaces] = useState(null)
 
     // your deployed heroku URL
-  const URL = "https://penguin-travel-app.herokuapp.com/place"
+  const URL = "https://penguin-travel-app.herokuapp.com/place/"
 
   // function to get updated list of places
   const getPlaces = async () => {
