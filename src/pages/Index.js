@@ -25,8 +25,8 @@ const Index = (props) => {
 const handleSubmit = (event) => {
     // prevent the page from refreshing
     event.preventDefault()
-    // pass the form data to createBookmark function
-    props.createBookmarks(newForm)
+    // pass the form data to createPlace function
+    props.createPlace(newForm)
     // reset the form to empty
     setNewForm({
         city: "",
@@ -69,7 +69,7 @@ if (props.places) {
           return (
             <div key={place._id} className="place">
               <h1>{place.city}, {place.country}</h1>
-                <Link to={`/place/${bookmark._id}`}>
+                <Link to={`/place/${place._id}`}>
                 <img src={place.image} alt={place.city}/>
               </Link>
             </div>

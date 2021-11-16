@@ -1,6 +1,6 @@
 import {useEffect, useState} from "react"
 import {Route, Routes} from "react-router-dom"
-import Index from "../pages/index"
+import Index from "../pages/Index"
 import Show from "../pages/Show"
 
 const Main = (props) => {
@@ -8,7 +8,7 @@ const Main = (props) => {
     const [places, setPlaces] = useState(null)
 
     // your deployed heroku URL
-  const URL = "https://travel-backend.herokuapp.com/travel/"
+  const URL = "https://penguin-travel-app.herokuapp.com/place"
 
   // function to get updated list of places
   const getPlaces = async () => {
@@ -21,7 +21,7 @@ const Main = (props) => {
 }
 
   // function that will later be passed data from our new/create form and make the post request to create a new place
-  const createPlaces = async (bookmark) => {
+  const createPlace = async (place) => {
     // make the post request to our API
     await fetch(URL, {
         method: "post",
@@ -35,7 +35,7 @@ const Main = (props) => {
     getPlaces()
 }
   // function to update a place
-  const updatePlaces = async (place, id) => {
+  const updatePlace = async (place, id) => {
     // make the put request
     await fetch(URL + id, {
         method: "put",
@@ -49,7 +49,7 @@ const Main = (props) => {
 }
 
 // create function to delete a place
-const deletePlaces = async (id) => {
+const deletePlace = async (id) => {
     // make the delete request
     await fetch(URL + id, {
         method: "delete"
@@ -69,10 +69,10 @@ return (
     <main class="mdc-top-app-bar--fixed-adjust">
       <Routes>
         <Route path="/" element={
-        <Index places={places} createPlaces={createPlaces}/>
+        <Index places={places} createPlace={createPlace}/>
         } />
         <Route path="/place/:id" element={
-        <Edit places={places} updatePlaces={updatePlaces} deletePlaces={deletePlaces}/>} 
+        <Show places={places} updatePlace={updatePlace} deletePlace={deletePlace}/>} 
         />
       </Routes>
     </main>
