@@ -70,7 +70,7 @@ if (props.places) {
             <div key={place._id} className="place">
               <h1>{place.city}, {place.country}</h1>
                 <Link to={`/place/${place._id}`}>
-                <img src={place.image} alt={place.city}/>
+                <img src={place.img} alt={place.city}/>
               </Link>
             </div>
           );
