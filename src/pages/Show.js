@@ -24,12 +24,12 @@ const Show = (props) => {
 
     const handleSubmit = (event) => {
         event.preventDefault()
-        props.updatePlaces(editForm, place._id)
+        props.updatePlace(editForm, place._id)
         navigate("/")
     }
 
-    const removePlaces = () => {
-        props.deletePlaces(place._id)
+    const removePlace = () => {
+        props.deletePlace(place._id)
         navigate("/")
     }
 
@@ -68,10 +68,9 @@ const Show = (props) => {
       );
       return (
         <div className="place">
-          <h1>{place.title}</h1>
-          <h2><a href={place.url}>Visit Place</a></h2>
+          <h1>{place.city}, {place.country}</h1>
           {form}
-          <button onClick={removePlaces}>Delete</button>
+          <button onClick={removePlace}>Delete</button>
         </div>
       );
     
