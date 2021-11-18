@@ -50,6 +50,20 @@ form {
   background-color: rgba(255,255,255,0.4);
 }
 
+.show {
+  width: 900px;
+  margin: 0 auto;
+  display: flex;
+  
+}
+
+.show-left {
+  width: 25%;
+}
+
+.show-right {
+  width: 75%;
+}
 section h1 {
   text-align: left;
   margin-left: 70px;
