@@ -12,9 +12,13 @@ const AttractionForm = (props) => {
     }
 
     const handleSubmit = (event) => {
-        event.preventDefault()
-        props.updatePlace(editForm, place._id)
-        navigate("/")
+      event.preventDefault()
+      // console.log(editForm.attractions)
+      console.log(place.attractions)
+      const newAttractions = place.attractions.push(editForm.attractions)
+      // console.log(newAttractions)
+      props.updatePlace(newAttractions, place._id)
+      navigate("/")
     }
 
     const form = (
