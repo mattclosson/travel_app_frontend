@@ -1,6 +1,7 @@
-import {useState, useEffect} from "react"
+import {useState, useEffect, useRef} from "react"
 import { useParams, useNavigate } from "react-router-dom";
-
+import Sidebar from "../components/Show/Sidebar";
+import AttractionForm from "../components/Show/AttractionForm"
 const Show = (props) => {
   const navigate = useNavigate()
   const params = useParams();
@@ -67,10 +68,14 @@ const Show = (props) => {
         </form>
       );
       return (
-        <div className="place">
-          <h1>{place.city}, {place.country}</h1>
-          {form}
-          <button onClick={removePlace}>Delete</button>
+        <div className="place show">
+          <Sidebar place={place} updatePlace={props.updatePlace} />
+          <div className="show-right">
+            <h1>{place.city}, {place.country}</h1>
+            <img src={place.img} />
+            {form}
+            <button onClick={removePlace}>Delete</button>
+          </div>
         </div>
       );
     
