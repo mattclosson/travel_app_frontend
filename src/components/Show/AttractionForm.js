@@ -15,9 +15,10 @@ const AttractionForm = (props) => {
       event.preventDefault()
       // console.log(editForm.attractions)
       console.log(place.attractions)
-      const newAttractions = place.attractions.push(editForm.attractions)
-      // console.log(newAttractions)
-      props.updatePlace(newAttractions, place._id)
+      let newAttractions = [...place.attractions, editForm.attractions]
+      // newAttractions = newAttractions.push(editForm.attractions)
+      console.log(newAttractions)
+      props.updatePlace({"attractions": newAttractions}, place._id)
       navigate("/")
     }
 
@@ -25,12 +26,13 @@ const AttractionForm = (props) => {
         <form onSubmit={handleSubmit}>
             <input
             type="text"
-            value={editForm.attractions}
+            value={editForm.attractionss}
             name="attractions"
             placeholder="Attraction"
             onChange={handleChange}
+            class="attraction-input"
             />
-          <input type="submit" value="Add Attraction" />
+          <input class="attraction-button" type="submit" value="Add Attraction" />
         </form>
       );
       return (

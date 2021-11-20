@@ -8,7 +8,7 @@ const Sidebar = (props) => {
             {place.attractions.map((attraction) => {
                 return(
                     <>
-                    <span key={attraction}>{attraction}</span><br />
+                    <span class="attraction" key={attraction}>{attraction}</span>
                     </>
                 )
             })}
