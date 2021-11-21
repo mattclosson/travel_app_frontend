@@ -27,4 +27,8 @@
 - App
   - Header
   - Main
+
+## Bibliography
+
+Carousel Resource- https://www.youtube.com/watch?v=l1MYfu5YWHc&ab_channel=BrianDesign
    
