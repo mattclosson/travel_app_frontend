@@ -43,26 +43,26 @@ const handleSubmit = (event) => {
    })
 }
 
-    const form = <form onSubmit={handleSubmit}>
+    const form = <form onSubmit={handleSubmit} class="addPlaceForm">
         <input
         type="text"
         value={newForm.city}
         name="city"
-        placeholder="city"
+        placeholder="City"
         onChange={handleChange}
         />
         <input
         type="text"
         value={newForm.country}
         name="country"
-        placeholder="country"
+        placeholder="Country"
         onChange={handleChange}
         />
           <input
         type="text"
         value={newForm.img}
         name="img"
-        placeholder="img"
+        placeholder="Image URL"
         onChange={handleChange}
         />
         <input type="submit" value="Create Destination"/>
