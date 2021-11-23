@@ -84,6 +84,7 @@ if (props.places) {
                 <Link to={`/place/${place._id}`}>
                 <img src={place.img} alt={place.city}/>
               </Link>
+              <p><i>{place.description}</i></p>
             </div>
           );
         })}
