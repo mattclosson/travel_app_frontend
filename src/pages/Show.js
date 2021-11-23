@@ -35,7 +35,7 @@ const Show = (props) => {
     }
 
     const form = (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} class="updateForm">
             <input
             type="text"
             value={editForm.city}
@@ -74,7 +74,7 @@ const Show = (props) => {
             <h1>{place.city}, {place.country}</h1>
             <img src={place.img} />
             {form}
-            <button onClick={removePlace}>Delete</button>
+            <button onClick={removePlace} class="delete-button">Delete</button>
           </div>
         </div>
       );
