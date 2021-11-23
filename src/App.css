@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Sigmar+One&display=swap');
+
+
 .carousel {
   position: relative;
   height: 100%;
@@ -36,10 +39,12 @@
 }
 
 h2 {
-  color: red;
   text-align: left;
   font-size: 100px;
   margin: 0%;
+  font-family: 'Sigmar One', cursive;
+  color: navy;
+
   
   
 }
@@ -67,12 +72,26 @@ h3 {
   opacity: 1;
   transition-duration: 1s;
   transform: scale(1.08);
+  background-color: rgb(255, 245, 238, 0.5);
+  padding-left: 250px;
+  padding-right: 250px;
+  padding-bottom: 10px;
+  margin-top: 50px;
 }
 
-@media(max-width: 800px) {
+
+.left-arrow, .right-arrow {
+  color: orange;
+}
+
+@media(max-width: 900px) {
 
   .top_heading {
     font-size: 300%;
+    text-align: center;
+  }
+
+  .carousel {
     text-align: center;
   }
 
@@ -84,6 +103,21 @@ h3 {
     padding: 20px;
   }
 
+  .carouselItems.active{
+    text-align: center;
+  }
+
+  .carouselItems.active div {
+    margin-bottom: 100px;
+  }
+  
+  /* .carouselItems.active div img {
+    width: 200px;
+    margin-left: 170px;
+  } */
+
+
+
   .carouselCountry {
     font-size: 100%;
   }
@@ -91,6 +125,9 @@ h3 {
    .carouselImage {
   width: 300%;
   height: 100%;
+  display: block;
+  position: relative;
+  left: 80px;
   
   }
 
