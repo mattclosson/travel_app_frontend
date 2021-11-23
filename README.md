@@ -23,6 +23,9 @@
 - As a user, I can delete a place so I can keep my travel log relevant
 - As a user, I can update a place in case I need to add information or there were errors
 
+## Challenges
+- Media Responsiveness: Carousel images would not stay in place
+
 ## Component Tree
 - App
   - Header
