@@ -48,6 +48,7 @@ form {
   text-align: left;
   color: navy;
   text-align: center;
+  font-family: 'Sigmar One', cursive;
 }
 
 .place {
@@ -55,11 +56,15 @@ form {
   text-align: center;
 }
 
+.placesNames {
+  text-align: left;
+  font-size: 48px;
+}
+
 .show {
   width: 900px;
   margin: 0 auto;
   display: flex;
-  
 }
 
 .show-left {
@@ -68,6 +73,10 @@ form {
 
 .show-right {
   width: 75%;
+}
+
+.show-right img {
+  width: 80%;
 }
 
 .attraction {
@@ -123,4 +132,101 @@ code {
 
 .github {
   margin: 5px;
+}
+
+@media(max-width: 900px) {
+
+
+  .App {
+   text-align: center;
+   display: block;
+   background-size: cover;
+   width: 450px;
+   padding-right: 300px;
+   height: 4000px;
+   text-align: center;
+  }
+
+
+
+  nav {
+    width: 200%;
+  }
+
+  main {
+    text-align: center;
+  }
+  
+
+  section {
+    display: block;
+  }
+
+  .place {
+    width: 400px;
+  }
+
+  .carouselItems.active div {
+    margin-bottom: 100px;
+  }
+
+  .carouselItems.active div img {
+    width: 200px;
+  }
+
+  .placesNames {
+    font-size: 100%;
+  }
+
+  .place.show {
+    height: 800px;
+  }
+
+  .show-right h1 {
+    position: absolute;
+    top: 80px;
+    margin-left: 140px;
+    font-size: 24px;
+  }
+
+  .show-right img{
+    height: 200px;
+    position: absolute;
+    top: 140px;
+    right: 20px;
+    margin-top: 30px;
+  }
+
+  .show-right form {
+    position: absolute;
+    top: 450px;
+    left: 100px;
+    width: 60%;
+  }
+
+  .show-left {
+    position: absolute;
+    top: 450px;
+  }
+
+  .attraction-button {
+    font-size: 11px;
+    width: 120%;
+  }
+
+  h1 {
+    font-size: 10px;
+  }
+
+
+  .header h1 {
+    font-size: 10px;
+    padding: 20px;
+
+  }
+  .Footer {
+   
+    bottom: 0;
+
+  }
 }

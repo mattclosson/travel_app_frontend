@@ -1,4 +1,4 @@
-# Bookmark Project
+# Travel App Project
 ## Route Table
 
 | Route         | Description   | 
@@ -22,6 +22,9 @@
 - As a user, I can create a new place and see that it immediately loads on the page so that I know I successfully added a place
 - As a user, I can delete a place so I can keep my travel log relevant
 - As a user, I can update a place in case I need to add information or there were errors
+
+## Challenges
+- Media Responsiveness: Carousel images would not stay in place
 
 ## Component Tree
 - App
