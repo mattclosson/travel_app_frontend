@@ -9,8 +9,6 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <h2>Special Offers</h2>
-      <Carousel carouselImgs={CarouselData}/>
       <Main />
       <Footer />
     </div>

@@ -124,3 +124,33 @@ code {
 .github {
   margin: 5px;
 }
+
+@media(max-width: 800px) {
+
+  .App {
+   text-align: center;
+   display: block;
+  }
+
+  .placesNames {
+    font-size: 100%;
+  }
+
+  h1 {
+    font-size: 10px;
+  }
+  .header {
+  
+  }
+
+  .header h1 {
+    font-size: 10px;
+    padding: 20px;
+
+  }
+  .Footer {
+   
+    bottom: 0;
+
+  }
+}

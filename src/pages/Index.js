@@ -1,7 +1,14 @@
 import {useState} from "react"
 import { Link } from "react-router-dom";
+import Carousel from '../components/Carousel';
+import CarouselData from '../components/CarouselData';
+
+
+
 
 const Index = (props) => {
+
+  
 
     // state to hold form data
     const [newForm, setNewForm] = useState({
@@ -65,13 +72,15 @@ if (props.places) {
     return (
       <section>
         {form}
+        <h2 className="top_heading">Specials</h2>
+        <Carousel carouselImgs={CarouselData}/>
         <div className="header">
         <h1>Destinations</h1>
         </div>
         {props.places.map((place) => {
           return (
             <div key={place._id} className="place">
-              <h1>{place.city}, {place.country}</h1>
+              <h1 className="placesNames">{place.city}, {place.country}</h1>
                 <Link to={`/place/${place._id}`}>
                 <img src={place.img} alt={place.city}/>
               </Link>
