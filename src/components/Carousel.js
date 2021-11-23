@@ -30,7 +30,7 @@ const Carousel = ({ carouselImgs }) => {
           >
             {index === current && (
             <div>
-                <h3>{carousel.country}</h3>
+                <h3 className="carouselCountry">{carousel.country}</h3>
                 <img
                 src={carousel.image}
                 alt="travel image"
